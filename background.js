@@ -101,8 +101,8 @@ chrome.storage.local.set({domain: "", timestamp: 0}, () => {
 });
 
 chrome.alarms.create("breakReminder", {
-    delayInMinutes: 15,
-    periodInMinutes: 15,
+    delayInMinutes: 1,
+    periodInMinutes: 1,
   });
   
   chrome.alarms.onAlarm.addListener((alarm) => {
