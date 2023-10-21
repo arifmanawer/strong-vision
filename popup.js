@@ -271,7 +271,7 @@ function showEyeExerciseReminderPopup() {
 function startEyeExerciseReminderInterval() {
     setInterval(() => {
         showEyeExerciseReminderPopup();
-    }, 900000); // Show the popup every 15 minutes (900,000 milliseconds)
+    }, 30); // Show the popup every 15 minutes (900,000 milliseconds)
 }
 
 
