@@ -13,6 +13,7 @@
             max-width: 600px;
             margin: 0 auto;
             padding: .5em;
+            font-style: italic;
         }
 
         #log img {
@@ -38,9 +39,19 @@
         }
 
         #period button {
-            flex: 1;
-        }
+        flex: 1;
+        padding: 10px;
+        background-color: #000000;
+        color: rgb(242, 100, 190);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
 
+        #period button:hover {
+        background-color: #2980b9;
+    }
         .percent {
             height: .25em;
             background: lightgray;
@@ -54,7 +65,7 @@
         }
 
         .col {
-            background: lightgray;
+            background: rgb(65, 230, 245);
         }
     </style>
     <script src="popup.js"></script>
@@ -82,13 +93,13 @@
             </tbody>
             <tfoot>
             <tr>
-                <th>Mon</th>
-                <th>Tue</th>
-                <th>Wed</th>
-                <th>Thu</th>
-                <th>Fri</th>
-                <th>Sat</th>
-                <th>Sun</th>
+                <th><b>Mon</b></th>
+                <th><b>Tue</b></th>
+                <th><b>Wed</b></th>
+                <th><b>Thu</b></th>
+                <th><b>Fri</b></th>
+                <th><b>Sat</b></th>
+                <th><b>Sun</b></th>
             </tr>
             </tfoot>
         </table>
@@ -168,10 +179,10 @@
 </fieldset>
 <fieldset>
     <legend>Actions</legend>
-    <button id="clear">clear</button>
-    <button id="seed">seed</button>
-    <button id="json">export (json)</button>
-    <button id="csv">export (csv)</button>
+    <button id="clear">CLEAR</button>
+    <button id="seed">SEED</button>
+    <button id="json">EXPORT(.json)</button>
+    <button id="csv">EXPORT(.csv)</button>
 </fieldset>
 </body>
 </html>
