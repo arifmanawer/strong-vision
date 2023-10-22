@@ -99,3 +99,39 @@ chrome.storage.local.set({domain: "", timestamp: 0}, () => {
         setCurrentDomain("").then(() => console.log("suspend"))
     })
 });
+
+let timer;
+
+// Function to show the 10-minute popup
+function showEyeExercisePopup() {
+    const popup = document.createElement("div");
+    popup.id = "eyeExercisePopup";
+    popup.style.position = "fixed";
+    popup.style.bottom = "20px";
+    popup.style.right = "20px";
+    popup.style.padding = "10px";
+    popup.style.background = "#fff";
+    popup.style.border = "2px solid #333";
+    popup.style.borderRadius = "5px";
+    popup.style.zIndex = "9999";
+    popup.innerHTML = "It's been 10 minutes. Take a few minutes to try out these eye exercises.";
+
+    document.body.appendChild(popup);
+
+    setTimeout(() => {
+        const eyeExercisePopup = document.getElementById("eyeExercisePopup");
+        if (eyeExercisePopup) {
+            eyeExercisePopup.remove();
+        }
+    }, 60000); // Close the popup after 60 seconds (1 minute)
+}
+
+// Function to start the 10-minute timer
+function startTenMinuteTimer() {
+    timer = setInterval(() => {
+        showEyeExercisePopup();
+    }, 60000); // Show the popup after 10 minutes (600,000 milliseconds)
+}
+
+// Start the 10-minute timer
+startTenMinuteTimer();

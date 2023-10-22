@@ -245,26 +245,9 @@ function refresh() {
 }
 
 function showEyeExerciseReminderPopup() {
-    const popup = document.createElement("div");
-    popup.id = "eyeExercisePopup";
-    popup.style.position = "fixed";
-    popup.style.bottom = "20px";
-    popup.style.right = "20px";
-    popup.style.padding = "10px";
-    popup.style.background = "#fff";
-    popup.style.border = "2px solid #333";
-    popup.style.borderRadius = "5px";
-    popup.style.zIndex = "9999";
-    popup.innerHTML = "You've been using the computer for 25 minutes. Take a rest and do an eye exercise.";
-
-    document.body.appendChild(popup);
-
-    setTimeout(() => {
-        const eyeExercisePopup = document.getElementById("eyeExercisePopup");
-        if (eyeExercisePopup) {
-            eyeExercisePopup.remove();
-        }
-    }, 60000); // Close the popup after 60 seconds (1 minute)
+    function showEyeExerciseReminderPopup() {
+        window.alert("You've been using the computer for 25 minutes. Take a rest and do an eye exercise.");
+    } // Close the popup after 60 seconds (1 minute)
 }
 
 // Function to show the eye exercise reminder at regular intervals
